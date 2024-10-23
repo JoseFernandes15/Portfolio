@@ -1,0 +1,144 @@
+##navbar
+
+msgid "lingua_en"
+msgstr "EN"
+
+msgid "lingua_pt"
+msgstr "pt"
+
+msgid "inicio"
+msgstr "Home"
+
+msgid "competencias"
+msgstr "Skills"
+
+msgid "responsividade"
+msgstr "Mobile Devices"
+
+msgid "projetos"
+msgstr "Projects"
+
+##hero
+
+msgid "sobre"
+msgstr "I am a Full-Stack developer with 2 years of experience in webpages and applications development. My goal is developing functional and efficient solutions that positively impact people's lives."
+
+msgid "btn_sobre"
+msgstr "Know more"
+
+##competencias
+
+msgid "competencias_texto"
+msgstr "As a Full-Stack developer, I am involved in the entire development process, from planning to publishing the website."
+
+msgid "bd"
+msgstr "DATABASE"
+
+msgid "front"
+msgstr "FRONT-END DEVELOPMENT"
+
+msgid "back"
+msgstr "BACK-END DEVELOPMENT"
+
+msgid "db_text"
+msgstr "I am capable of creating customizable databases by gathering specific requirements from clients during meetings."
+
+msgid "front_text"
+msgstr "I can create the user interface in multiple programming languages, allowing me to select the most suitable one for each project."
+
+msgid "back_text"
+msgstr "I can create the internal logic of the application in multiple programming languages, allowing me to select the most suitable one for each project."
+
+msgid "btn_saber_mais"
+msgstr "Know more"
+
+msgid "btn_ver_tudo"
+msgstr "View All"
+
+##Sobre Mim
+
+msgid "sobre_titulo"
+msgstr "About"
+
+msgid "mim_titulo"
+msgstr "Me"
+
+msgid "sobremim_h2"
+msgstr "My name is José Pedro Sampaio Fernandes. I am 20 years old. I was born and live in Guimarães, Portugal."
+
+msgid "sobremim_p1"
+msgstr "In 2019, I began the Technical Programming and Management of Computer Systems Course at Escola Secundária Francisco de Holanda."
+
+msgid "sobremim_p2"
+msgstr "In 2020, I began learning web development and creating web pages using HTML, CSS, and JavaScript."
+
+msgid "sobremim_p3"
+msgstr "In 2021, I created my first web application, where I developed a database, a user interface, and the application's internal logic."
+
+msgid "sobremim_p4"
+msgstr "In 2022, I was in my final year of the Technical Programming and Management of Computer Systems course."
+
+msgid "sobremim_p5"
+msgstr "As part of the course requirements, I needed to take the Professional Aptitude Test (PAP). I reached an agreement with Casual Design, a company, to develop a web page containing information about the company and a web application for internal management."
+
+msgid "sobremim_p6"
+msgstr "This project was well received by the company and earned me a score of 19 out of 20 during the PAP presentation."
+
+msgid "sobremim_p7"
+msgstr "In the same year, as part of the course requirements, I completed an internship where I had the opportunity to learn the AngularJS framework, Node, and Restful APIs."
+
+msgid "sobremim_p8"
+msgstr "It was a great experience that introduced me to the professional world and helped me develop responsibility."
+
+msgid "sobremim_p9"
+msgstr "At this stage of my formation, I was assigned 18 out of 20 values."
+
+msgid "sobremim_p10"
+msgstr "After interning, the course was completed with an average of 16 points out of 20 and I received a Level 4 qualification on the European Qualifications Framework (EQF)."
+
+msgid "sobremim_p11"
+msgstr "In 2023, I began attending the Higher Professional Technical Course (CTeSP) in Web Development and Multimedia at the Instituto Politécnico do Cávado e do Ave (IPCA)."
+
+msgid "sobremim_p12"
+msgstr "Since then, I have gained knowledge and practical experience in various concepts, methodologies, and frameworks related to web development."
+
+msgid "projetos_text1"
+msgstr "My projects are not available yet!"
+
+msgid "projetos_text2"
+msgstr "I'm currently configuring the servers and domains for the projects to become available!"
+
+##Contacto
+
+msgid "contacto"
+msgstr "Contact <span>Me</span>"
+
+msgid "email"
+msgstr "Email Address"
+
+msgid "email_h2"
+msgstr "Send me a mail:"
+
+msgid "mensagem"
+msgstr "Message"
+
+msgid "btn_contacto"
+msgstr "Send"
+
+msgid "btn_voltar"
+msgstr "Return"
+
+msgid "responsividade_texto"
+msgstr "Try my website on mobile devices!"
+
+msgid "project_p1"
+msgstr "My projects are not available yet!"
+
+msgid "project_p2"
+msgstr "I'm currently configuring the servers and domains for the projects to become available!"
+
+msgid "404"
+msgstr "Page Not Found"
+
+msgid "btn_home"
+msgstr "Home Page"

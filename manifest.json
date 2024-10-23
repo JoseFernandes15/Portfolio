@@ -1,0 +1,13 @@
+{
+    "name": "Portfolio José Pedro Fernandes",
+    "short_name": "Portfolio",
+    "start_url": "/",
+    "display": "standalone",
+    "icons": [
+        {
+          "src": "images/slider-img.webp",
+          "sizes": "192x192",
+          "type": "image/webp"
+        }       
+      ]
+}

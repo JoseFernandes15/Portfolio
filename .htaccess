@@ -1,0 +1,14 @@
+php_value display_errors Off
+php_value mbstring.http_input auto
+php_value date.timezone Europe/Lisbon
+ErrorDocument 404 https://josefernandes.pt/404.php
+<IfModule mod_headers.c>
+    Header set Server "Apache"
+</IfModule>
+<IfModule mod_http2.c>
+    Protocols h2
+</IfModule>
+# Remover a regra de redirecionamento para HTTPS
+#RewriteEngine On
+#RewriteCond %{HTTPS} !=on
+#RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]

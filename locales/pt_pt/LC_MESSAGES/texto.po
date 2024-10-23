@@ -1,0 +1,144 @@
+##navbar
+
+msgid "lingua_en"
+msgstr "en"
+
+msgid "lingua_pt"
+msgstr "PT"
+
+msgid "inicio"
+msgstr "Início"
+
+msgid "competencias"
+msgstr "Competências"
+
+msgid "responsividade"
+msgstr "Responsividade"
+
+msgid "projetos"
+msgstr "Projetos"
+
+##hero
+
+msgid "sobre"
+msgstr "Sou um desenvolvedor Full-Stack com 2 anos de experiência no desenvolvimento de páginas e aplicações Web.<br> Tenho como objetivo criar soluções funcionais e eficientes que impactem positivamente na vida das pessoas."
+
+msgid "btn_sobre"
+msgstr "Saber mais"
+
+##competencias
+
+msgid "competencias_texto"
+msgstr "Como desenvolvedor Full Stack, posso estar envolvido em todo o processo de desenvolvimento, desde o planeamento até à publicação do website."
+
+msgid "bd"
+msgstr "BASE DE DADOS"
+
+msgid "front"
+msgstr "DESENVOLVIMENTO FRONT-END"
+
+msgid "back"
+msgstr "DESENVOLVIMENTO BACK-END"
+
+msgid "db_text"
+msgstr "Consigo desenvoler bases de dados personalizadas com base nos requisitos recolhidos em reuniões com o cliente."
+
+msgid "front_text"
+msgstr "Consigo desenvolver a interface do utilizador, em várias linguagens. Podendo escolher a mais indicada para cada projeto. "
+
+msgid "back_text"
+msgstr "Consigo desenvolver a lógica interna da aplicação em várias linguagens. Podendo escolher a mais indicada para cada projeto."
+
+msgid "btn_saber_mais"
+msgstr "Saber mais"
+
+msgid "btn_ver_tudo"
+msgstr "Ver Tudo"
+
+##Sobre Mim
+
+msgid "sobre_titulo"
+msgstr "Sobre"
+
+msgid "mim_titulo"
+msgstr "Mim"
+
+msgid "sobremim_h2"
+msgstr "Chamo-me José Pedro Sampaio Fernandes. Tenho 19 anos. Nasci e vivo em Guimarães, Portugal."
+
+msgid "sobremim_p1"
+msgstr "Em 2019, comecei a frequentar Curso Técnico de programação e gestão de sistemas informáticos da Escola Secundária Francisco de Holanda."
+
+msgid "sobremim_p2"
+msgstr "Em 2020, comecei a estudar programação web e a desenvolver páginas web com HTML, CSS e Javascript."
+
+msgid "sobremim_p3"
+msgstr "Em 2021, concluí minha primeira aplicação web, onde desenvolvi uma base de dados, a interface do utilizador e a lógica interna da aplicação."
+
+msgid "sobremim_p4"
+msgstr "Em 2022, estava no último ano do curso técnico de programação e gestão de sistemas informáticos."
+
+msgid "sobremim_p5"
+msgstr "Com a necessidade de realizar a PAP (Prova de Aptidão Profissional), cheguei a um acordo com a empresa Casual Design para desenvolver uma página web com informações da empresa e uma aplicação web para gestão interna."
+
+msgid "sobremim_p6"
+msgstr "Este projeto além de ser bem recebido pela empresa, garantiu-me uma nota de 19 valores (0 a 20) na apresentação da PAP."
+
+msgid "sobremim_p7"
+msgstr "Ainda no mesmo ano, realizei um estágio (formação em contexto de trabalho) onde tive a oportunidade de aprender a framework AngularJS, Node e APIs Restful."
+
+msgid "sobremim_p8"
+msgstr "Foi uma ótima experiência que me fez ganhar responsabilidade e introduziu-me ao "mundo do trabalho"."
+
+msgid "sobremim_p9"
+msgstr "Nesta etapa da minha formação foram-me atribuidos 18 valores (0 a 20)."
+
+msgid "sobremim_p10"
+msgstr "Após estagiar, o curso foi concluído com média de 16 valores (0 a 20) e foi me garantido o nível 4 de qualificação do Quadro Nacional de Qualificações e do Quadro Europeu de Qualificações."
+
+msgid "sobremim_p11"
+msgstr "Em 2023 comecei a frequentar o Curso Técnico Superior Profissional (CTeSP) em Desenvolvimento Web e Multimédia do Institudo Politécnico do Cávado e do Ave (IPCA)."
+
+msgid "sobremim_p12"
+msgstr "Desde então tenho aprendido e posto em prática vários conceitos, metedologias e frameworks."
+
+msgid "projetos_text1"
+msgstr "Os meus projetos ainda não estão disponíveis online!"
+
+msgid "projetos_text2"
+msgstr "Estou neste momento a configurar os servidores e domínios para estes ficarem disponíveis!"
+
+##Contacto
+
+msgid "contacto"
+msgstr "Contacto"
+
+msgid "email"
+msgstr "Endereço Email"
+
+msgid "email_h2"
+msgstr "Envie-me um email:"
+
+msgid "mensagem"
+msgstr "Mensagem"
+
+msgid "btn_contacto"
+msgstr "Enviar"
+
+msgid "btn_voltar"
+msgstr "Voltar"
+
+msgid "responsividade_texto"
+msgstr "Teste o website em dispositivos móveis!"
+
+msgid "project_p1"
+msgstr "Os meus projetos ainda não estão disponíveis online!"
+
+msgid "project_p2"
+msgstr "Estou neste momento a configurar os servidores e domínios para estes ficarem disponíveis!"
+
+msgid "404"
+msgstr "Página não encontrada"
+
+msgid "btn_home"
+msgstr "Página Inicial"

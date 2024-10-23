@@ -1,0 +1,20 @@
+{
+    "name": "josefernandes/portfolio",
+    "description": "personal portfolio",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Josefernandes\\Portfolio\\": "./"
+        }
+    },
+    "authors": [
+        {
+            "name": "JosePedroFernandes"
+        }
+    ],
+    "require": {
+        "gettext/gettext": "^4.0"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
