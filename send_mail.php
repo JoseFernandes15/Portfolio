@@ -3,7 +3,6 @@
 require 'vendor/autoload.php';
 require 'config.php';
 
-
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
@@ -18,7 +17,7 @@ if (!empty($_POST['cf-turnstile-response'])) {
         'response' => $turnstile_response,
     );
 } else {
-    header("Location: ./index.php#contacto?erro=turnstile#contactos");
+    header("Location: ./index.php?erro=turnstile#contactos");
     exit;
 }
 

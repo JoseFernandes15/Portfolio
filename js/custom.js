@@ -1,8 +1,15 @@
 window.onload = function () {
   mensagem();
+  //se for a pagina responsiva, verificar a largura da pagina sempre que ela é redimensionada
   if (window.location.pathname === "/responsive.php") {
     window.addEventListener("resize", verificarLargura);
     verificarLargura();
+  }
+  //se houver esso no turnstile aparecer erro no formulario
+  const url = window.location.search;
+  if (url.includes("?erro=turnstile")){
+    const errorMessage = document.getElementById("errorMessage");
+    errorMessage.innerHTML = "Por favor verifique que não é um robô!";
   }
 };
 
