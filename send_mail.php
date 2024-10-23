@@ -47,13 +47,13 @@ if ($result['success']) {
         $mail->isSMTP();
         $mail->Host = 'smtp.elasticemail.com'; // Endereço do servidor SMTP
         $mail->SMTPAuth = true;
-        $mail->Username = 'Portfolio@josefernandes.free.nf'; // Seu endereço de email
+        $mail->Username = 'Portfolio@josefernandes.pt'; // Seu endereço de email
         $mail->Password = ELASTICMAIL_API_KEY; // Sua senha de email
         $mail->SMTPSecure = 'tls';
         $mail->Port = 2525; // Porta do servidor SMTP
     
         // Configuração do remetente e destinatário
-        $mail->setFrom('Portfolio@josefernandes.free.nf', 'Contacto Portfolio');
+        $mail->setFrom('Portfolio@josefernandes.pt', 'Contacto Portfolio');
 
         $mail->addAddress('zepedrofernandessampaio@gmail.com');
     
