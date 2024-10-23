@@ -1,9 +1,10 @@
 <?php
 
-require_once('PHPMailer/vendor/autoload.php');
+require 'vendor/autoload.php';
 require 'config.php';
+
+
 use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
 $turnstile_secret = CLOUDFLARE_API_KEY;
