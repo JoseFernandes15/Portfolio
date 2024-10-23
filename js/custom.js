@@ -70,7 +70,6 @@ function validateEmail() {
   const email = document.getElementById("email").value;
   const content = document.getElementById("conteudoEmail").value;
   const errorMessage = document.getElementById("errorMessage");
-  const token = document.querySelector('.cf-turnstile').getAttribute('data-response');
 
 
   // Verifica se o email é válido
@@ -85,12 +84,6 @@ function validateEmail() {
       return false;
   } else if (content.length === 0) {
       errorMessage.innerHTML = "Por favor introduza uma mensagem!";
-      return false;
-  }
-
-  // Verifica se o reCAPTCHA foi confirmado
-  if (!token) {
-      errorMessage.innerHTML = "Por favor confirme que não é um robô!";
       return false;
   }
 
