@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 require 'vendor/autoload.php';
 require 'config.php';
@@ -7,6 +8,19 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
 $turnstile_secret = CLOUDFLARE_API_KEY;
+
+$allowed_origin = "https://josefernandes.pt";
+$csrf_token = $_POST['csrf_token'] ?? null;
+
+if ($_SERVER['REQUEST_METHOD'] !== 'POST' || !isset($_SERVER['HTTP_ORIGIN']) || $_SERVER['HTTP_ORIGIN'] !== $allowed_origin) {
+    header("HTTP/1.1 403 Forbidden");
+    exit('Acesso não autorizado.');
+}
+
+if (!$csrf_token || $csrf_token !== $_SESSION['csrf_token']) {
+    header("Location: ./index.php?erro=csrf#contactos");
+    exit('Token CSRF inválido.');
+}
 
 if (!empty($_POST['cf-turnstile-response'])) {
     $turnstile_response = $_POST['cf-turnstile-response'];
@@ -40,9 +54,9 @@ $result = json_decode($response, true);
 if ($result['success']) {
 
     try {
-        $email = $_POST['email'];
-        $conteudoEmail = $_POST['conteudoEmail'];~
-        $lang=$_COOKIE["language"];
+        $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
+        $conteudoEmail = htmlspecialchars($_POST['conteudoEmail'], ENT_QUOTES, 'UTF-8');
+        $lang = $_COOKIE["language"] ?? 'en_en';
         $mail = new PHPMailer(true);
 
         // Configuração do servidor SMTP
@@ -84,6 +98,6 @@ if ($result['success']) {
     header("location:./index.php?robot=1");
 }
 
-
+$_SESSION['csrf_token'] = bin2hex(random_bytes(32));
 
 ?>

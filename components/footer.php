@@ -11,6 +11,15 @@
             <?php echo $translator->gettext("email_h2"); ?>
           </h4>
           <form onsubmit="return validateEmail()" action="send_mail.php" method="post" >
+          <?php
+            // Iniciar a sessão para usar o token CSRF
+            session_start();
+            // Gerar o token CSRF
+            if (empty($_SESSION['csrf_token'])) {
+                $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+            }
+            ?>
+            <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>">
             <input type="email" id='email' name="email" autocomplete="email" placeholder=" <?php echo $translator->gettext("email"); ?>" >
             
             <textarea class="mt-3" id="conteudoEmail" name="conteudoEmail" cols="30" rows="3" placeholder=" <?php echo $translator->gettext("mensagem"); ?>"></textarea>

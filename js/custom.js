@@ -94,11 +94,12 @@ const language = getCookieValue('language');
 
 function validateEmail() {
   //pegar nos elementos html
-  const email = document.getElementById("email").value;
-  const content = document.getElementById("conteudoEmail").value;
+  const email = document.getElementById("email").value.trim();
+  const content = document.getElementById("conteudoEmail").value.trim();
   const errorMessage = document.getElementById("errorMessage");
 
   //mensagens de erro dependendo da linguagem
+  let erro_email, erro_longa, erro_sem;
   if(language=="pt_pt"){
     erro_email="Por favor introduza um email válido!"
     erro_longa="A sua mensagem é demasiado longa!"
@@ -111,10 +112,11 @@ function validateEmail() {
 
 
   // Verifica se o email é válido
-  if (!email.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)) {
-      errorMessage.innerHTML = erro_email;
-      return false;
-  }
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(email) || email.length > 256) { // Limita o comprimento do email
+        errorMessage.textContent = erro_email; // Evita XSS usando textContent
+        return false;
+    }
 
   // Verifica o comprimento da mensagem
   if (content.length > 250) {

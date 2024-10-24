@@ -15,6 +15,11 @@ require 'config.php';
 use Gettext\Translator;
 use Gettext\Translations;
 
+//Gerar token csrf
+if (empty($_SESSION['csrf_token'])) {
+    $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+}
+
 $api_key=IP_INFO_API_KEY;
 
 // Função para obter o país do usuário
