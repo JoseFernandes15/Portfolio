@@ -10,9 +10,15 @@ $api_key=IP_INFO_API_KEY;
 
 // Função para obter o país do usuário
 function getUserCountry() {
-    $response = file_get_contents("https://ipinfo.io/json?token=$api_key");
+    if (isset($_SERVER['HTTP_CF_CONNECTING_IP'])) {
+        $user_ip = $_SERVER['HTTP_CF_CONNECTING_IP'];
+    } else {
+        // Caso não esteja disponível, usa o IP remoto padrão
+        $user_ip = $_SERVER['REMOTE_ADDR'];
+    }
+    $response = file_get_contents("https://ipinfo.io/{$user_ip}/json?token=");
     if ($response === false) {
-        return 'PT'; // Retorna um valor padrão se a API falhar
+        return 'EN'; // Retorna um valor padrão se a API falhar
     }
     $data = json_decode($response, true);
     $countryCode = $data['country'];

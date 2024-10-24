@@ -1,7 +1,17 @@
 <?php
+require 'config.php';
 
-    $response = file_get_contents("https://ipinfo.io/json?token=2bd62e00ae7724");
-    if ($response === false) {
+$api_key=IP_INFO_API_KEY;
+
+if (isset($_SERVER['HTTP_CF_CONNECTING_IP'])) {
+    $user_ip = $_SERVER['HTTP_CF_CONNECTING_IP'];
+} else {
+    // Caso não esteja disponível, usa o IP remoto padrão
+    $user_ip = $_SERVER['REMOTE_ADDR'];
+}
+ $response = file_get_contents("https://ipinfo.io/{$user_ip}/json?token=");
+ echo $response;
+ if ($response === false) {
         echo "erro";
     }
     $data = json_decode($response, true);
