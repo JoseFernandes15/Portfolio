@@ -9,7 +9,13 @@ window.onload = function () {
   const url = window.location.search;
   if (url.includes("?erro=turnstile")){
     const errorMessage = document.getElementById("errorMessage");
-    errorMessage.innerHTML = "Por favor verifique que não é um robô!";
+    const language = getCookieValue('language');
+
+    if(language=='pt_pt'){
+      errorMessage.innerHTML = "Por favor confirme que não é um robô!";
+    }else{
+      errorMessage.innerHTML = "Please confirm that you are not a robot!";
+    }
   }
 };
 
@@ -73,24 +79,49 @@ function linkdin() {
   window.open("https://www.linkedin.com/in/josé-pedro-fernandes", "_blank");
 }
 
+function getCookieValue(cookieName) {
+  const cookies = document.cookie.split('; ');
+  for (let cookie of cookies) {
+      const [name, value] = cookie.split('=');
+      if (name === cookieName) {
+          return decodeURIComponent(value);
+      }
+  }
+  return null; // Retorna null se o cookie não for encontrado
+}
+
+const language = getCookieValue('language');
+
 function validateEmail() {
+  //pegar nos elementos html
   const email = document.getElementById("email").value;
   const content = document.getElementById("conteudoEmail").value;
   const errorMessage = document.getElementById("errorMessage");
 
+  //mensagens de erro dependendo da linguagem
+  if(language=="pt_pt"){
+    erro_email="Por favor introduza um email válido!"
+    erro_longa="A sua mensagem é demasiado longa!"
+    erro_sem="Por favor introduza uma mensagem!"
+  }else{
+    erro_email="Please enter a valid email address!"
+    erro_longa="Your message is too long!"
+    erro_sem="Please write a message!"
+  }
+
 
   // Verifica se o email é válido
   if (!email.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)) {
-      errorMessage.innerHTML = "Por favor introduza um email válido!";
+      errorMessage.innerHTML = erro_email;
       return false;
   }
 
   // Verifica o comprimento da mensagem
   if (content.length > 250) {
-      errorMessage.innerHTML = "A sua mensagem é demasiado longa!";
+      errorMessage.innerHTML = erro_longa;
       return false;
   } else if (content.length === 0) {
-      errorMessage.innerHTML = "Por favor introduza uma mensagem!";
+      errorMessage.innerHTML = erro_sem;
       return false;
   }
 
