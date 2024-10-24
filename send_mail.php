@@ -60,7 +60,7 @@ if ($result['success']) {
         // Conteúdo do email
         $mail->isHTML(true);
         $mail->Subject = 'Contacto - Portfolio';
-        $mail->Body = "<h1>Contacto pelo portfólio</h1><br>".$conteudoEmail . "<br>Enviado por: " . $email."<br>Em:".$lang."<br>Morada: Rua alto da bandeira 154";
+        $mail->Body = "<h3>Contacto pelo portfólio</h3><br>".$conteudoEmail . "<br>Enviado por: " . $email;
     
         // Enviar o email
         $mail->send();
