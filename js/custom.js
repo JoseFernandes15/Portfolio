@@ -33,8 +33,8 @@ function verificarLargura() {
 }
 
 function changeLanguage(language) {
-  // Define o cookie com a nova linguagem, válido por 30 dias
-  document.cookie = "language=" + language + "; path=/; max-age=" + (30*24*60*60);
+  // Define o cookie com a nova linguagem, válido por 14 dias
+  document.cookie = "language=" + language + "; path=/; domain=josefernandes.pt; secure; samesite=Lax; max-age=" + (14*24*60*60);
   
   // Recarrega a página para aplicar a mudança
   window.location.reload();
