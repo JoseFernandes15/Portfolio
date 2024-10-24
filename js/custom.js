@@ -27,7 +27,7 @@ function verificarLargura() {
     document.body.clientWidth;
 
   // Se a largura for menor que 770 pixels, redireciona para a página inicial
-  if (larguraDispositivo < 770) {
+  if (larguraDispositivo < 1000) {
     window.location.href = "index.php";
   }
 }
