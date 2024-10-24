@@ -2,10 +2,17 @@ php_value display_errors Off
 php_value mbstring.http_input auto
 php_value date.timezone Europe/Lisbon
 ErrorDocument 404 https://josefernandes.pt/404.php
+<IfModule mod_http2.c>
+    Protocols h2
+</IfModule>
 <IfModule mod_headers.c>
     Header set Server "Apache"
     Header set X-Content-Type-Options "nosniff"
+    Header set Referrer-Policy "same-origin"
+    Header set Strict-Transport-Security "max-age=31536000; includeSubDomains;"
+    Header set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js https://challenges.cloudflare.com/turnstile/v0/api.js https://*.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com; img-src 'self'; frame-src 'self' https://challenges.cloudflare.com/;"
 </IfModule>
-<IfModule mod_http2.c>
-    Protocols h2
+<IfModule mod_version.c>
+    ServerTokens Prod
+    ServerSignature Off
 </IfModule>

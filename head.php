@@ -8,6 +8,7 @@
   <meta name="description" content="Portfólio José Pedro Fernandes, Portfolio, Programmer, Programador, Full-Stack, Front-end, Back-end, Web Development, Desenvolvimento Web, SQL, PHP, Angular, Javascript, HTML, CSS, Software Developer, Desenvolvedor de Software, LinkedIn, programação, Web Design">
   <meta name="author" content="José Pedro Fernandes" />
   <meta name="theme-color" content="#0f054c">
+  <meta name="referrer" content="same-origin">
   <link rel="shortcut icon" href="images/slider-img.webp" type="">
 
   <title> José Fernandes - Portfólio </title>
