@@ -23,12 +23,13 @@
               </div>
               <div class="detail-box">
                 <h5>
-                  Base de dados
+                <?php echo $translator->gettext("bd"); ?>
                 </h5>
                 <p>
-                  Consigo desenvoler bases de dados personalizadas com base nos requisitos recolhidos em reuniões com o cliente.                </p>
+                <?php echo $translator->gettext("db_text"); ?>
+                </p>
                 <b>
-                  Conhecimentos SQL:
+                  SQL:
                 </b>
                 <p class="mt-2">
                   MySql <br>
@@ -47,21 +48,36 @@
               </div>
               <div class="detail-box">
                 <h5>
-                 Desenvolvimento Front-End
+                <?php echo $translator->gettext("front"); ?>
                 </h5>
                 <p>
-                  Consigo desenvolver a interface do utilizador, em várias linguagens. Podendo escolher a mais indicada para cada projeto.                
+                <?php echo $translator->gettext("front_text"); ?>       
                 </p>
+                <div class="row">
+                  <div class="col-2"></div>  
+                  <div class="col-4" style="margin-left:-0rem">
                     <b>
-                      Conhecimentos Front-End
+                    <?php echo $translator->gettext("linguagens"); ?>
+                      </b>
+                      <p class="mt-2">
+                    HTML <br>
+                    CSS<br>
+                    JavaScript<br>
+                    TypeScript
+                  </p>
+                  <br>
+                    </div>
+                  <div class="col-4" style="margin-right:-0rem">
+                  <b>
+                      Frameworks
                     </b>
                     <p class="mt-2">
-                  HTML <br>
-                  CSS<br>
-                  JavaScript<br>
-                  TypeScript<br>
-                  Angular
-                </p>
+                  Angular <br>
+                  Laravel(Blade)
+                    </p>
+                  </div>
+                  <div class="col-2"></div>
+                </div>
               </div>
             </div>
           </div>
@@ -72,20 +88,35 @@
               </div>
               <div class="detail-box">
                 <h5>
-                 Desenvolvimento Back-End
+                <?php echo $translator->gettext("back"); ?>
                 </h5>
                 <p>
-                  Consigo desenvolver a lógica interna da aplicação em várias linguagens. Podendo escolher a mais indicada para cada projeto.                  
+                <?php echo $translator->gettext("back_text"); ?>            
                 </p>
+                <div class="row">
+                  <div class="col-2"></div>  
+                  <div class="col-4" style="margin-left:-0rem">
+                    <b>
+                    <?php echo $translator->gettext("linguagens"); ?>
+                      </b>
+                      <p class="mt-2">
+                      PHP <br>
+                      Javascript
+                  </p>
+                    </div>
+                  <div class="col-4" style="margin-right:-0rem">
                   <b>
-                    Conhecimentos Back-End
-                  </b>
-                  <p class="mt-2">
-                  PHP <br>
-                  Node.js<br>
-                  ExpressJS<br>
-                  Jest
-                </p>              
+                      Frameworks
+                    </b>
+                    <p class="mt-2">
+                      Laravel <br>
+                      Node.js<br>
+                      ExpressJS<br>
+                      Jest
+                    </p>
+                  </div>
+                  <div class="col-2"></div>
+                </div>          
               </div>
             </div>
           </div>
@@ -96,19 +127,19 @@
               </div>
               <div class="detail-box">
                 <h5>
-                  Desenvolvimento
+                <?php echo $translator->gettext("extra"); ?>
                  </h5>
                  <p>
-                  Alguns conhecimentos sem categoria. <br>  Como design de UI, repositórios git e metodologia ágil.
+                 <?php echo $translator->gettext("extra_texto_1"); ?> <br>  <?php echo $translator->gettext("extra_texto_2"); ?> 
                  <p>
                 <b>
-                 Conhecimentos Extra
+                <?php echo $translator->gettext("extra_h2"); ?> 
                 </b>
                 <p class="mt-2">
                   Figma<br>
                   GitHub<br>
                   GitLab<br>
-                  Metodologia ágil Scrum 
+                  <?php echo $translator->gettext("agil"); ?> 
                 </p>
               </div>
             </div>

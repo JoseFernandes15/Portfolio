@@ -142,3 +142,26 @@ msgstr "Página não encontrada"
 
 msgid "btn_home"
 msgstr "Página Inicial"
+
+##competencias
+
+msgid "extra"
+msgstr "EXTRA"
+
+msgid "extra_texto_1"
+msgstr "Alguns conhecimentos sem categoria."
+
+msgid "extra_texto_2"
+msgstr "Como design de UI, repositórios git e metodologia ágil."
+
+msgid "extra_h2"
+msgstr "Conhecimentos Extra"
+
+msgid "linguagens"
+msgstr "Linguagens"
+
+msgid "agil"
+msgstr "Metodologia ágil Scrum"
+
+
+

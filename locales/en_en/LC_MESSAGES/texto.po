@@ -142,3 +142,28 @@ msgstr "Page Not Found"
 
 msgid "btn_home"
 msgstr "Home Page"
+
+
+##competencias
+
+msgid "extra"
+msgstr "EXTRA"
+
+msgid "extra_texto_1"
+msgstr "Knowledge without category."
+
+msgid "extra_texto_2"
+msgstr "As UI design, git repositories and agil metodology."
+
+msgid "extra_h2"
+msgstr "Extra Skills"
+
+msgid "linguagens"
+msgstr "Languages"
+
+msgid "agil"
+msgstr "Agil metodology"
+
+
+
+

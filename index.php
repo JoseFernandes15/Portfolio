@@ -93,7 +93,7 @@
               </div>
               <div class="detail-box">
                 <h5>
-                <?php echo $translator->gettext("db"); ?>
+                <?php echo $translator->gettext("bd"); ?>
                 </h5>
                 <p>
                 <?php echo $translator->gettext("db_text"); ?>
