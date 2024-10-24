@@ -27,9 +27,6 @@
                 <button class="enviar" type="submit"> <?php echo $translator->gettext("btn_contacto"); ?></button>
               </div>
             </div>
-            <input type="text" value="pt" name="lang" style="display:none">
-            <input type="text" value="" name="recaptchaResponsePT" id="recaptchaResponsePT" style="display:none">
-
           </form>
         </div>
       <div class="col-4 d-none-sm">

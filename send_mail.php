@@ -35,12 +35,14 @@ $context = stream_context_create($options);
 $response = file_get_contents($url, false, $context);
 $result = json_decode($response, true);
 
+
+
 if ($result['success']) {
 
     try {
         $email = $_POST['email'];
         $conteudoEmail = $_POST['conteudoEmail'];~
-        $lang = $_POST['lang'];
+        $lang=$_COOKIE["language"];
         $mail = new PHPMailer(true);
 
         // Configuração do servidor SMTP
@@ -64,10 +66,10 @@ if ($result['success']) {
     
         // Enviar o email
         $mail->send();
-        if($lang==="pt"){
+        if($lang==="pt_pt"){
             echo 'Email enviado com sucesso!';
             header("location:./index.php?sucesso=1");
-        }else if($lang==="eng"){
+        }else if($lang==="en_en"){
             echo 'Email enviado com sucesso!';
             header("location:./index.php?success=1");
         }else{
