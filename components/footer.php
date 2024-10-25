@@ -11,7 +11,7 @@
           <h4>
             <?php echo $translator->gettext("email_h2"); ?>
           </h4>
-          <form onsubmit="return validateEmail()" action="send_mail.php" method="post" >
+          <form onsubmit="return validateEmail()" action="send_mail.php" method="post" id="form_contacto" name="form_contacto">
           <?php
             // Gerar o token CSRF
             if (empty($_SESSION['csrf_token'])) {
