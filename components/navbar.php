@@ -32,7 +32,7 @@ $current_page = basename($_SERVER['REQUEST_URI']);
             <!-- navbar -->
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav">
-                    <li class="nav-item <?php echo ($current_page == 'index.php') ? 'active' : ''; ?>">
+                    <li class="nav-item <?php echo ($current_page == 'index.php' || $current_page == '') ? 'active' : ''; ?>">
                         <a class="nav-link" href="index.php"><?php echo $translator->gettext("inicio"); ?>
                             <?php if ($current_page == 'index.php'): ?>
                             <span class="sr-only">(current)</span>
