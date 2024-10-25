@@ -4,8 +4,8 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <meta name="keywords" content="My name is José Pedro Sampaio Fernandes, I am a full-stack web developer. This is my porfolio, see my work and contact!" />
-  <meta name="description" content="Portfólio José Pedro Fernandes, Portfolio, Programmer, Programador, Full-Stack, Front-end, Back-end, Web Development, Desenvolvimento Web, SQL, PHP, Angular, Javascript, HTML, CSS, Software Developer, Desenvolvedor de Software, LinkedIn, programação, Web Design">
+  <meta name="keywords" content="Portfólio José Pedro Fernandes, Programador Full-Stack, Desenvolvimento Web, SQL, PHP, Angular, Javascript, Laravel, NodeJs, Desenvolvedor de Software">
+  <meta name="description" content="My name is José Pedro Sampaio Fernandes, I am a full-stack web developer. Explore my porfolio, see my projects and contact me!">
   <meta name="author" content="José Pedro Fernandes" />
   <meta name="theme-color" content="#0f054c">
   <meta name="referrer" content="same-origin">
