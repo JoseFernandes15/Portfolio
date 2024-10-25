@@ -11,7 +11,7 @@ body{font-family:"Open Sans",sans-serif;color:#0c0c0c;background-color:#fff;over
     background: #bd95e256; 
 }
 #ModalSucesso {display: none;min-width: 250px;background-color: white;color: rgb(21, 109, 3);padding:10px;text-align: center;border-radius: 10px;position: fixed;z-index: 1;right: 10px;top: 70px;}
-#ModalSuccess {display: none;min-width: 250px;background-color: white;color: rgb(21, 109, 3);padding:10px;text-align: center;border-radius: 10px;position: fixed;z-index: 1;right: 10px;top: 70px;}
+#ModalSucesso1 {display: none;min-width: 250px;background-color: white;color: rgb(21, 109, 3);padding:10px;text-align: center;border-radius: 10px;position: fixed;z-index: 1;right: 10px;top: 70px;}
 @media screen and (min-width: 770px) {
 .d-none-lg{display:none!important}
 }
@@ -26,7 +26,7 @@ body{font-family:"Open Sans",sans-serif;color:#0c0c0c;background-color:#fff;over
 .g-recaptcha{transform:scale(0.8);float:none;margin-right:200%!important}
 .img-working{width:230px !important}
 #ModalSucesso {display: none;max-width: 200px;background-color: rgb(255, 255, 255);color: rgb(21, 109, 3);padding:10px;text-align: center;border-radius: 10px;position: fixed;z-index: 1;top: 20px;right:8px}
-#ModalSuccess {display: none;max-width: 200px;background-color: rgb(255, 255, 255);color: rgb(21, 109, 3);padding:10px;text-align: center;border-radius: 10px;position: fixed;z-index: 1;top: 20px;right:8px}
+#ModalSucesso1 {display: none;max-width: 200px;background-color: rgb(255, 255, 255);color: rgb(21, 109, 3);padding:10px;text-align: center;border-radius: 10px;position: fixed;z-index: 1;top: 20px;right:8px}
 }
 @media screen and (min-width: 300px) and (max-width: 615px) {
 ::-webkit-scrollbar{width:8px}
@@ -38,8 +38,8 @@ body{font-family:"Open Sans",sans-serif;color:#0c0c0c;background-color:#fff;over
 .d-none-sm{display:none!important}
 .g-recaptcha{transform:scale(0.93);float:right}
 .img-working{width:230px !important}
-#ModalSucesso {display: none;max-width: 200px;background-color: rgb(255, 255, 255);color: rgb(21, 109, 3);padding:10px;text-align: center;border-radius: 10px;position: fixed;z-index: 1;top: 20px;right:8px}
-#ModalSuccess {display: none;max-width: 200px;background-color: rgb(255, 255, 255);color: rgb(21, 109, 3);padding:10px;text-align: center;border-radius: 10px;position: fixed;z-index: 1;top: 20px;right:8px}
+#ModalSucesso {display: none;max-width: 94%;background-color: rgb(255, 255, 255);color: rgb(21, 109, 3);padding:10px;text-align: center;border-radius: 10px;position: fixed;z-index: 1;top: 20px;right:8px}
+#ModalSucesso1 {display: none;max-width: 94%;max-height: 80px;background-color: rgb(255, 255, 255);color: rgb(21, 109, 3);padding:10px;text-align: center;border-radius: 10px;position: fixed;z-index: 1;top: 20px;right:8px}
 }
 @media screen and (min-width: 615px) and (max-width: 770px) {
 ::-webkit-scrollbar{width:8px}
@@ -58,7 +58,7 @@ body{font-family:"Open Sans",sans-serif;color:#0c0c0c;background-color:#fff;over
 .fontS-md{font-size:12px}
 .img-working{width:280px!important}
 }
-.img-success{display: flex;align-items: center;height: 10vh;}
+.img-success{display: flex;align-items: center;height: 5vh;}
 .e404{font-size: 150px;font-weight:bold;background: -webkit-linear-gradient(top left, #0769e9, #4f2ee0, #160c41);-webkit-background-clip: text;-webkit-text-fill-color: transparent;user-select: none;}
 .p404{font-size: 30px;font-weight:bold;background: -webkit-linear-gradient(top left, #3f1ae2, #291097);-webkit-background-clip:text;-webkit-text-fill-color:transparent;user-select:none;}
 .link-email{cursor: pointer;}

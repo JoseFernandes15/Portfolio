@@ -57,6 +57,7 @@ function mensagem() {
   // Exibe o modal da mensagem de sucesso
   if (url.includes("?sucesso=1") || url.includes("?success=1")) {
     showModal("ModalSucesso");
+    showModal("ModalSucesso1");
     return true;
   }
 
