@@ -1,5 +1,5 @@
 window.onload = function () {
-  mensagem();
+  mensagem(); // Exibe mensagens de sucesso ou erro no modal
   //se for a pagina responsiva, verificar a largura da pagina sempre que ela é redimensionada
   if (window.location.pathname === "/responsive.php") {
     window.addEventListener("resize", verificarLargura);
@@ -7,65 +7,66 @@ window.onload = function () {
   }
   //se houver esso no turnstile aparecer erro no formulario
   const url = window.location.search;
-  if (url.includes("?erro=turnstile")){
+  if (url.includes("?erro=turnstile")) {
     const errorMessage = document.getElementById("errorMessage");
-    const language = getCookieValue('language');
+    const language = getCookieValue("language");
 
-    if(language=='pt_pt'){
+    if (language == "pt_pt") {
       errorMessage.innerHTML = "Por favor confirme que não é um robô!";
-    }else{
+    } else {
       errorMessage.innerHTML = "Please confirm that you are not a robot!";
     }
   }
 };
 
 function verificarLargura() {
-
   var larguraDispositivo =
     window.innerWidth ||
     document.documentElement.clientWidth ||
     document.body.clientWidth;
 
-  // Se a largura for menor que 770 pixels, redireciona para a página inicial
+  // Se a largura for menor que 1000 pixels, redireciona para a página inicial
   if (larguraDispositivo < 1000) {
     window.location.href = "index.php";
   }
 }
 
 function changeLanguage(language) {
-  // Define o cookie com a nova linguagem, válido por 14 dias
-  document.cookie = "language=" + language + "; path=/; domain=josefernandes.pt; secure; samesite=Lax; max-age=" + (14*24*60*60);
-  
+  // Define o cookie com a nova linguagem, válido por 14 dias e recarrega a pagina
+  document.cookie =
+    "language=" +
+    language +
+    "; path=/; domain=josefernandes.pt; secure; samesite=Lax; max-age=" +
+    14 * 24 * 60 * 60;
+
   // Recarrega a página para aplicar a mudança
   window.location.reload();
 }
 
 function mensagem() {
-  const url = window.location.search;
-
   // Função para mostrar e ocultar o modal
   function showModal(modalId) {
-      const modal = document.getElementById(modalId);
-      modal.style.display = "block";
-      setTimeout(() => {
-          modal.style.display = "none";
-      }, 5000);
+    const modal = document.getElementById(modalId);
+    modal.style.display = "block";
+    setTimeout(() => {
+      modal.style.display = "none";
+    }, 5000);
   }
 
   // Verifica os parâmetros da URL e exibe o modal correspondente
   if (url.includes("?sucesso=1")) {
-      showModal("ModalSucesso");
-      return true;
+    showModal("ModalSucesso");
+    return true;
   } else if (url.includes("?success=1")) {
-      showModal("ModalSuccess");
-      return true;
+    showModal("ModalSuccess");
+    return true;
   }
 
   return false;
 }
 
-
 function scrollToSection(e) {
+  // Faz scroll suave para a seção especificada
   const n = document.getElementById(e);
 
   n.scrollIntoView({ behavior: "smooth" });
@@ -80,17 +81,16 @@ function linkdin() {
 }
 
 function getCookieValue(cookieName) {
-  const cookies = document.cookie.split('; ');
+  // Pega no valor da cookie espeficiada
+  const cookies = document.cookie.split("; ");
   for (let cookie of cookies) {
-      const [name, value] = cookie.split('=');
-      if (name === cookieName) {
-          return decodeURIComponent(value);
-      }
+    const [name, value] = cookie.split("=");
+    if (name === cookieName) {
+      return decodeURIComponent(value);
+    }
   }
   return null; // Retorna null se o cookie não for encontrado
 }
-
-const language = getCookieValue('language');
 
 function validateEmail() {
   //pegar nos elementos html
@@ -98,33 +98,34 @@ function validateEmail() {
   const content = document.getElementById("conteudoEmail").value.trim();
   const errorMessage = document.getElementById("errorMessage");
 
+  const language = getCookieValue("language");
+
   //mensagens de erro dependendo da linguagem
   let erro_email, erro_longa, erro_sem;
-  if(language=="pt_pt"){
-    erro_email="Por favor introduza um email válido!"
-    erro_longa="A sua mensagem é demasiado longa!"
-    erro_sem="Por favor introduza uma mensagem!"
-  }else{
-    erro_email="Please enter a valid email address!"
-    erro_longa="Your message is too long!"
-    erro_sem="Please write a message!"
+  if (language == "pt_pt") {
+    erro_email = "Por favor introduza um email válido!";
+    erro_longa = "A sua mensagem é demasiado longa!";
+    erro_sem = "Por favor introduza uma mensagem!";
+  } else {
+    erro_email = "Please enter a valid email address!";
+    erro_longa = "Your message is too long!";
+    erro_sem = "Please write a message!";
   }
 
-
   // Verifica se o email é válido
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailPattern.test(email) || email.length > 256) { // Limita o comprimento do email
-        errorMessage.textContent = erro_email; // Evita XSS usando textContent
-        return false;
-    }
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailPattern.test(email) || email.length > 256) {
+    errorMessage.textContent = erro_email; // Evita XSS usando textContent
+    return false;
+  }
 
   // Verifica o comprimento da mensagem
   if (content.length > 250) {
-      errorMessage.innerHTML = erro_longa;
-      return false;
+    errorMessage.innerHTML = erro_longa;
+    return false;
   } else if (content.length === 0) {
-      errorMessage.innerHTML = erro_sem;
-      return false;
+    errorMessage.innerHTML = erro_sem;
+    return false;
   }
 
   // Se todas as verificações passaram

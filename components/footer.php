@@ -1,3 +1,4 @@
+  <!-- Seção de contacto -->
 <section class="info_section layout_padding2" id="contactos">
     <div class="container">
       <div class="heading_container heading_center psudo_white_primary mb_45 mb-5">
@@ -12,8 +13,6 @@
           </h4>
           <form onsubmit="return validateEmail()" action="send_mail.php" method="post" >
           <?php
-            // Iniciar a sessão para usar o token CSRF
-            session_start();
             // Gerar o token CSRF
             if (empty($_SESSION['csrf_token'])) {
                 $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
@@ -23,9 +22,11 @@
             <input type="email" id='email' name="email" autocomplete="email" placeholder=" <?php echo $translator->gettext("email"); ?>" >
             
             <textarea class="mt-3" id="conteudoEmail" name="conteudoEmail" cols="30" rows="3" placeholder=" <?php echo $translator->gettext("mensagem"); ?>"></textarea>
+            <!-- Parágrafo para exibir mensagens de erro -->
             <p id="errorMessage" class="error-message mt-2"></p>
             <div class="row">
               <div class="col-lg-6 col-md-6 col-sm-12">
+                 <!-- Cloudflare turnstile -->
               <div
                 class="cf-turnstile"
                 data-sitekey="0x4AAAAAAAyIyLNObRrY1S01"
@@ -82,9 +83,7 @@
     </div>
   </section>
 
-  <!-- end info section -->
-
-  <!-- footer section -->
+  <!-- Seção do footer -->
   <section class="footer_section">
     <div class="container">
       <p>

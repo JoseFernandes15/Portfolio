@@ -42,6 +42,7 @@
 
   <?php include('components/footer.php'); ?>
 
+<!-- Aviso caso a pagina não seja redirecionada automaticamente -->
 <not-available class="d-none-lg">
 
   <h1>Not available on mobile devices!</h1>

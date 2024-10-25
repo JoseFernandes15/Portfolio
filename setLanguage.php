@@ -5,7 +5,7 @@ session_set_cookie_params([
     'domain' => 'josefernandes.pt', // Domínio do cookie
     'secure' => true,           // Apenas em conexões HTTPS
     'httponly' => true,         // Não acessível via JavaScript
-    'samesite' => 'Lax'         // Protege contra CSRF (ajuste conforme necessário)
+    'samesite' => 'Lax'         // Protege contra ataques CSRF, permite envios dentro do mesmo site
 ]);
 
 session_start();
@@ -22,7 +22,7 @@ if (empty($_SESSION['csrf_token'])) {
 
 $api_key=IP_INFO_API_KEY;
 
-// Função para obter o país do usuário
+// Função para obter o país do usuário baseado no IP
 function getUserCountry() {
     if (isset($_SERVER['HTTP_CF_CONNECTING_IP'])) {
         $user_ip = $_SERVER['HTTP_CF_CONNECTING_IP'];
@@ -30,15 +30,18 @@ function getUserCountry() {
         // Caso não esteja disponível, usa o IP remoto padrão
         $user_ip = $_SERVER['REMOTE_ADDR'];
     }
+
     $response = file_get_contents("https://ipinfo.io/{$user_ip}/json?token=");
     if ($response === false) {
         return 'EN'; // Retorna um valor padrão se a API falhar
     }
+    
     $data = json_decode($response, true);
     $countryCode = $data['country'];
     return $countryCode; // Retorna o código do país (ex: 'PT', 'BR', etc.)
 }
 
+// Função para definir o idioma e configurar o cookie de idioma do usuário
 function setLanguage($language){
     setcookie('language', $language, [
         'expires' => time() + (14 * 24 * 60 * 60),  // Expira em 1 hora
@@ -67,7 +70,7 @@ if (!isset($_COOKIE['language'])) {
             break;
     }
 
-    // Define o cookie de linguagem por 30 dias
+    // Define o cookie de linguagem
     setLanguage($language);
 } else {
     // Se o cookie já estiver definido, use o idioma do cookie

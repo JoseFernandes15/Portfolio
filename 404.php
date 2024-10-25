@@ -1,5 +1,6 @@
 <?php include('head.php'); ?>
 
+<!-- página erro 404 -->
 <body class="sub_page">
     <div class="hero_area">
     <?php include('components/navbar.php'); ?>
