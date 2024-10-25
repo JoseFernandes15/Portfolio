@@ -52,13 +52,11 @@ function mensagem() {
       modal.style.display = "none";
     }, 5000);
   }
-
-  // Verifica os parâmetros da URL e exibe o modal correspondente
-  if (url.includes("?sucesso=1")) {
+  
+  const url = window.location.search;
+  // Exibe o modal da mensagem de sucesso
+  if (url.includes("?sucesso=1") || url.includes("?success=1")) {
     showModal("ModalSucesso");
-    return true;
-  } else if (url.includes("?success=1")) {
-    showModal("ModalSuccess");
     return true;
   }
 

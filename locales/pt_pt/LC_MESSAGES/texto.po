@@ -163,5 +163,7 @@ msgstr "Linguagens"
 msgid "agil"
 msgstr "Metodologia ágil Scrum"
 
+msgid "sucesso"
+msgstr "A sua mensagem foi enviada com sucesso!"
 
 

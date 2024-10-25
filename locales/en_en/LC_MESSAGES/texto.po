@@ -164,6 +164,8 @@ msgstr "Languages"
 msgid "agil"
 msgstr "Agil metodology"
 
+msgid "sucesso"
+msgstr "Your message has been sent!"
 
 
 

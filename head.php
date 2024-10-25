@@ -9,7 +9,8 @@
   <meta name="author" content="José Pedro Fernandes" />
   <meta name="theme-color" content="#0f054c">
   <meta name="referrer" content="same-origin">
-  <link rel="shortcut icon" href="images/slider-img.webp" type="">
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="icon" href="favicon.ico">
 
   <title> José Fernandes - Portfólio </title>
 
