@@ -8,12 +8,12 @@
   <section class="service_section layout_padding">
     <div class="service_container">
       <div class="container ">
-        <div class="heading_container heading_center">
+        <div class="heading_container heading_center mb-5">
           <h2 class="no_select">
           <?php echo $translator->gettext("projetos"); ?></span>
           </h2>
         </div>
-        <div class="center-everything" style="margin-top:-30px">
+        <div class="center-everything">
           <div class="img-box no_select">
             <img src="images/OIG4.webp" alt="Em contrução" class="img-working">
           </div>
