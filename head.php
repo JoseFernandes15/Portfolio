@@ -20,7 +20,5 @@
   <link href="css/style.css" rel="stylesheet" />
   <link href="css/responsive.css" rel="stylesheet" />
   
-  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
-
   <link rel="manifest" href="manifest.json">
 </head>
