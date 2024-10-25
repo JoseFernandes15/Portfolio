@@ -1,6 +1,6 @@
 <?php
 include 'setLanguage.php';
-$current_page = basename($_SERVER['REQUEST_URI']);
+$current_page = basename(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
 ?>
 <header class="header_section">
     <div class="container-fluid no_select">
