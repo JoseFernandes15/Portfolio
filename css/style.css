@@ -463,3 +463,12 @@ a:hover,a:focus{color:initial}
 .interior-tablet{padding:5px 2px 5px 10px;background-color:#120024;width:630px;height:530px}
 .tablet{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-align:center;-ms-flex-align:center;align-items:center;text-align:center;margin-top:45px;background-color:#120024;padding:20px;border-radius:10px;width:630px;height:530px;user-select:none}
 }
+
+.scaled-iframe {
+        transform: scale(0.82);
+        transform-origin: 0 0;
+        width: 123%;
+        height: 123%;
+        backface-visibility: hidden;
+        -webkit-font-smoothing: antialiased;
+}
