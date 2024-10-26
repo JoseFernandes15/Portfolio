@@ -3,6 +3,7 @@
     "short_name": "Portfolio",
     "start_url": "/",
     "display": "standalone",
+    "description": "My name is José Pedro Sampaio Fernandes, I am a full-stack web developer. Explore my porfolio, see my projects and contact me!",
     "icons": [
         {
           "src": "images/slider-img.webp",

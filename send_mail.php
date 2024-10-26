@@ -14,7 +14,7 @@ $csrf_token = $_POST['csrf_token'] ?? null;
 
 // Verifica se o método é POST e se a origem da requisição é válida
 if ($_SERVER['REQUEST_METHOD'] !== 'POST' || !isset($_SERVER['HTTP_ORIGIN']) || $_SERVER['HTTP_ORIGIN'] !== $allowed_origin) {
-    header("HTTP/1.1 403 Forbidden");
+    header("Location: ./404.php"); 
     exit('Acesso não autorizado.');
 }
 
