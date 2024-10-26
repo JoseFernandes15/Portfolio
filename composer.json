@@ -2,6 +2,7 @@
     "name": "josefernandes/portfolio",
     "description": "personal portfolio",
     "type": "project",
+    "license": "proprietary",
     "autoload": {
         "psr-4": {
             "Josefernandes\\Portfolio\\": "./"
