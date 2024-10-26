@@ -140,6 +140,12 @@ msgstr "Estou neste momento a configurar os servidores e domínios para estes fi
 msgid "404"
 msgstr "Página não encontrada"
 
+msgid "403"
+msgstr "Acesso Negado"
+
+msgid "403_text"
+msgstr "Não tem permissão para aceder a este ficheiro!"
+
 msgid "btn_home"
 msgstr "Página Inicial"
 

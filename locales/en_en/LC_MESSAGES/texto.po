@@ -140,6 +140,12 @@ msgstr "I'm currently configuring the servers and domains for the projects to be
 msgid "404"
 msgstr "Page Not Found"
 
+msgid "403"
+msgstr "Forbidden"
+
+msgid "403_text"
+msgstr "You don't have permission to access this file!"
+
 msgid "btn_home"
 msgstr "Home Page"
 
