@@ -20,8 +20,14 @@ msgstr "Projetos"
 
 ##hero
 
-msgid "sobre"
-msgstr "Sou um desenvolvedor Full-Stack com 2 anos de experiência no desenvolvimento de páginas e aplicações Web.<br> Tenho como objetivo criar soluções funcionais e eficientes que impactem positivamente na vida das pessoas."
+msgid "sobre1"
+msgstr "Sou um desenvolvedor Full-Stack com "
+
+msgid "sobre2"
+msgstr " anos de experiência no desenvolvimento de páginas e aplicações Web."
+
+msgid "sobre3"
+msgstr "Tenho como objetivo criar soluções funcionais e eficientes que impactem positivamente na vida das pessoas."
 
 msgid "btn_sobre"
 msgstr "Saber mais"
@@ -63,8 +69,11 @@ msgstr "Sobre"
 msgid "mim_titulo"
 msgstr "Mim"
 
-msgid "sobremim_h2"
-msgstr "Chamo-me José Pedro Sampaio Fernandes. Tenho 19 anos. Nasci e vivo em Guimarães, Portugal."
+msgid "sobremim_h2_1"
+msgstr "Chamo-me José Pedro Sampaio Fernandes. Tenho "
+
+msgid "sobremim_h2_2"
+msgstr " anos. Nasci e vivo em Guimarães, Portugal."
 
 msgid "sobremim_p1"
 msgstr "Em 2019, comecei a frequentar Curso Técnico de programação e gestão de sistemas informáticos da Escola Secundária Francisco de Holanda."

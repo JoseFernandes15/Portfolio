@@ -1,4 +1,14 @@
-<?php include('head.php'); ?>
+<?php include('head.php');
+
+//definir experiencia e idade
+$anoInicial = new DateTime("2022-04-01");
+$DataNascimento = new DateTime("2004-09-15");
+$dataAtual = new DateTime();
+$experiencia_real = $dataAtual->diff($anoInicial);
+$idade_real = $dataAtual->diff($DataNascimento);
+$experiencia = $experiencia_real->y;
+$idade = $idade_real->y;
+?>
 
 <body>
     <!-- Landing page  -->
@@ -35,7 +45,12 @@
                                             </div>
                                         </div>
                                         <p class="efeito_letras" id="">
-                                            <?php echo $translator->gettext("sobre"); ?>
+                                        <?php 
+                                            echo $translator->gettext("sobre1") . 
+                                                $experiencia . 
+                                                $translator->gettext("sobre2") . "<br>" . 
+                                                $translator->gettext("sobre3"); 
+                                        ?>
                                         </p>
                                         <div class="btn-box no_select">
                                             <a href="#" onclick="scrollToSection('competencias')" class="btn1" disabled>
@@ -152,7 +167,11 @@
                     <span><?php echo $translator->gettext("mim_titulo"); ?></span>
                 </h2>
                 <p>
-                    <?php echo $translator->gettext("sobremim_h2"); ?>
+                    <?php 
+                        echo $translator->gettext("sobremim_h2_1") . 
+                        $idade . 
+                        $translator->gettext("sobremim_h2_2");
+                    ?>
                 </p>
             </div>
             <div class="row">
