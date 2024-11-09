@@ -19,7 +19,7 @@
               403
             </div>
            <div class="btn-box">
-             <a href="index.php" style="border-radius:8px" class="no_select">
+             <a href="/" style="border-radius:8px" class="no_select">
              <?php echo $translator->gettext("btn_home"); ?>
              </a>
            </div>

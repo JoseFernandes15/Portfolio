@@ -1,8 +1,8 @@
 php_value display_errors Off
 php_value mbstring.http_input auto
 php_value date.timezone Europe/Lisbon
-ErrorDocument 404 https://josefernandes.pt/404.php
-ErrorDocument 403 https://josefernandes.pt/403.php
+ErrorDocument 404 https://josefernandes.pt/404
+ErrorDocument 403 https://josefernandes.pt/403
 <IfModule mod_http2.c>
     Protocols h2
 </IfModule>
@@ -19,6 +19,7 @@ ErrorDocument 403 https://josefernandes.pt/403.php
     ServerSignature Off
 </IfModule>
 
+# Não permitir acveso a ficheiros css|png|jpg|jpeg|gif|woff|woff2|ttf|svg|webp
 <FilesMatch "\.(css|png|jpg|jpeg|gif|woff|woff2|ttf|svg|webp)$">
     SetEnvIf Referer "^https://(www\.)?josefernandes\.pt" internal_ref
     Order Deny,Allow
@@ -26,11 +27,20 @@ ErrorDocument 403 https://josefernandes.pt/403.php
     Allow from env=internal_ref
 </FilesMatch>
 
+# Ativar engine de redirecionamento 
 RewriteEngine On
 
+# Redirecionar para a pagina 403 caso o URL seja de um ficheiro gitignore|json|lock|po|mo exluindo o manifest.json
 RewriteCond %{REQUEST_URI} !^/manifest\.json [NC]
-RewriteRule ^.*\.(gitignore|json|lock|po|mo)$ /403.php [L,R=403]
+RewriteRule ^.*\.(gitignore|json|lock|po|mo)$ /403 [L,R=403]
 
-RewriteCond %{REQUEST_URI} \.(css|png|jpg|jpeg|gif|woff|woff2|ttf|svg)$
+# Redirecionar para a pagina 403 caso o URL seja de um ficheiro css|png|jpg|jpeg|gif|woff|woff2|ttf|svg|webp
+RewriteCond %{REQUEST_URI} \.(css|png|jpg|jpeg|gif|woff|woff2|ttf|svg|webp)$
 RewriteCond %{HTTP_REFERER} !^https://(www\.)?josefernandes\.pt [NC]
-RewriteRule ^.*$ /403.php [L,R=403]
+RewriteRule ^.*$ /403 [L,R=403]
+
+# Reescrever URLs para ocultar .php
+RewriteCond %{REQUEST_FILENAME} !-d 
+RewriteCond %{REQUEST_FILENAME} !-f 
+RewriteCond %{REQUEST_FILENAME}.php -f 
+RewriteRule ^(.*)$ $1.php [L,QSA]

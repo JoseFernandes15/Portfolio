@@ -32,23 +32,23 @@ $current_page = basename(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
             <!-- navbar -->
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav">
-                    <li class="nav-item <?php echo ($current_page == 'index.php' || $current_page == '') ? 'active' : ''; ?>">
-                        <a class="nav-link" href="index.php"><?php echo $translator->gettext("inicio"); ?>
+                    <li class="nav-item <?php echo ($current_page == 'index.php' || $current_page == '' || $current_page == 'index') ? 'active' : ''; ?>">
+                        <a class="nav-link" href="/"><?php echo $translator->gettext("inicio"); ?>
                             <?php if ($current_page == 'index.php'): ?>
                             <span class="sr-only">(current)</span>
                             <?php endif; ?>
                         </a>
                     </li>
-                    <li class="nav-item <?php echo ($current_page == 'skills.php') ? 'active' : ''; ?>">
-                        <a class="nav-link" href="skills.php"><?php echo $translator->gettext("competencias"); ?></a>
+                    <li class="nav-item <?php echo ($current_page == 'skills.php' || $current_page == 'skills') ? 'active' : ''; ?>">
+                        <a class="nav-link" href="skills"><?php echo $translator->gettext("competencias"); ?></a>
                     </li>
                     <li
-                        class="nav-item d-none-sm d-none-md <?php echo ($current_page == 'responsive.php') ? 'active' : ''; ?>">
+                        class="nav-item d-none-sm d-none-md <?php echo ($current_page == 'responsive.php' || $current_page == 'responsive') ? 'active' : ''; ?>">
                         <a class="nav-link"
-                            href="responsive.php"><?php echo $translator->gettext("responsividade"); ?></a>
+                            href="responsive"><?php echo $translator->gettext("responsividade"); ?></a>
                     </li>
-                    <li class="nav-item <?php echo ($current_page == 'portfolio.php') ? 'active' : ''; ?>">
-                        <a class="nav-link" href="portfolio.php"><?php echo $translator->gettext("projetos"); ?></a>
+                    <li class="nav-item <?php echo ($current_page == 'portfolio.php' || $current_page == 'portfolio') ? 'active' : ''; ?>">
+                        <a class="nav-link" href="portfolio"><?php echo $translator->gettext("projetos"); ?></a>
                     </li>
                 </ul>
             </div>

@@ -106,7 +106,7 @@ $idade = $idade_real->y;
                                     <?php echo $translator->gettext("db_text"); ?>
                                 </p>
                                 <br>
-                                <a href="skills.php" class="no_select">
+                                <a href="skills" class="no_select">
                                     <?php echo $translator->gettext("btn_saber_mais"); ?>
                                 </a>
                             </div>
@@ -124,7 +124,7 @@ $idade = $idade_real->y;
                                 <p>
                                     <?php echo $translator->gettext("front_text"); ?>
                                 </p>
-                                <a href="skills.php" class="no_select">
+                                <a href="skills" class="no_select">
                                     <?php echo $translator->gettext("btn_saber_mais"); ?>
                                 </a>
                             </div>
@@ -143,7 +143,7 @@ $idade = $idade_real->y;
                                     <?php echo $translator->gettext("back_text"); ?>
 
                                 </p>
-                                <a href="skills.php" class="no_select">
+                                <a href="skills" class="no_select">
                                     <?php echo $translator->gettext("btn_saber_mais"); ?>
                                 </a>
                             </div>
@@ -151,7 +151,7 @@ $idade = $idade_real->y;
                     </div>
                 </div>
                 <div class="btn-box">
-                    <a href="skills.php" style="border-radius:8px" class="no_select">
+                    <a href="skills" style="border-radius:8px" class="no_select">
                         <?php echo $translator->gettext("btn_ver_tudo"); ?>
                     </a>
                 </div>

@@ -1,7 +1,7 @@
 window.onload = function () {
   mensagem(); // Exibe mensagens de sucesso ou erro no modal
   //se for a pagina responsiva, verificar a largura da pagina sempre que ela é redimensionada
-  if (window.location.pathname === "/responsive.php") {
+  if (window.location.pathname === "/responsive.php" || window.location.pathname === "/responsive") {
     window.addEventListener("resize", verificarLargura);
     verificarLargura();
   }
@@ -27,7 +27,7 @@ function verificarLargura() {
 
   // Se a largura for menor que 1000 pixels, redireciona para a página inicial
   if (larguraDispositivo < 1000) {
-    window.location.href = "index.php";
+    window.location.href = "/";
   }
 }
 

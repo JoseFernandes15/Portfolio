@@ -14,13 +14,13 @@ $csrf_token = $_POST['csrf_token'] ?? null;
 
 // Verifica se o método é POST e se a origem da requisição é válida
 if ($_SERVER['REQUEST_METHOD'] !== 'POST' || !isset($_SERVER['HTTP_ORIGIN']) || $_SERVER['HTTP_ORIGIN'] !== $allowed_origin) {
-    header("Location: ./403.php"); 
+    header("Location: ./403"); 
     exit('Acesso não autorizado.');
 }
 
 // Verifica se o token CSRF está presente e se corresponde ao gerado na sessão
 if (!$csrf_token || $csrf_token !== $_SESSION['csrf_token']) {
-    header("Location: ./index.php?erro=csrf#contactos");
+    header("Location: ./?erro=csrf#contactos");
     exit('Token CSRF inválido.');
 }
 
@@ -34,7 +34,7 @@ if (!empty($_POST['cf-turnstile-response'])) {
         'response' => $turnstile_response,
     );
 } else {
-    header("Location: ./index.php?erro=turnstile#contactos");
+    header("Location: ./?erro=turnstile#contactos");
     exit;
 }
 
@@ -86,13 +86,13 @@ if ($result['success']) {
         $mail->send();
         if($lang==="pt_pt"){
             echo 'Email enviado com sucesso!';
-            header("location:./index.php?sucesso=1");
+            header("location:./?sucesso=1");
         }else if($lang==="en_en"){
             echo 'Email enviado com sucesso!';
-            header("location:./index.php?success=1");
+            header("location:./?success=1");
         }else{
             echo 'Email enviado com sucesso!';
-            header("location:./index.php?success=1");
+            header("location:./?success=1");
         }
        
     } catch (Exception $e) {
@@ -100,7 +100,7 @@ if ($result['success']) {
     }
 } else {
     // Redireciona caso a verificação do Turnstile falhe
-    header("location:./index.php?robot=1");
+    header("location:./?robot=1");
 }
 
 // Gera um novo token CSRF para a próxima submissão
