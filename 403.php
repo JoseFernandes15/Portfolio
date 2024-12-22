@@ -1,3 +1,4 @@
+<!-- perigo -->
 <?php include('head.php'); ?>
 
 <!-- página erro 403 -->
