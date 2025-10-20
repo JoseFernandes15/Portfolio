@@ -9,7 +9,7 @@ use PHPMailer\PHPMailer\Exception;
 
 $turnstile_secret = CLOUDFLARE_API_KEY;
 
-$allowed_origin = "https://josefernandes.pt";
+$allowed_origin = "https://josefernandes.dev";
 $csrf_token = $_POST['csrf_token'] ?? null;
 
 // Verifica se o método é POST e se a origem da requisição é válida
@@ -65,21 +65,21 @@ if ($result['success']) {
 
         // Configuração do servidor SMTP
         $mail->isSMTP();
-        $mail->Host = 'smtp.elasticemail.com'; // Endereço do servidor SMTP
+        $mail->Host = 'smtp.zoho.eu'; // Endereço do servidor SMTP
         $mail->SMTPAuth = true;
-        $mail->Username = 'Portfolio@josefernandes.pt'; // Seu endereço de email
-        $mail->Password = ELASTICMAIL_API_KEY; // Sua senha de email
+        $mail->Username = 'contacto@josefernandes.dev'; // Seu endereço de email
+        $mail->Password = ZOHO_APP_PWD; // Sua senha de email
         $mail->SMTPSecure = 'tls';
-        $mail->Port = 2525; // Porta do servidor SMTP
+        $mail->Port = 587; // Porta do servidor SMTP
     
         // Configuração do remetente e destinatário
-        $mail->setFrom('Portfolio@josefernandes.pt', 'Contacto Portfolio');
+        $mail->setFrom('contacto@josefernandes.dev', 'Contacto - PortfÓlio');
 
         $mail->addAddress('zepedrofernandessampaio@gmail.com');
     
         // Conteúdo do email
         $mail->isHTML(true);
-        $mail->Subject = 'Contacto - Portfolio';
+        $mail->Subject = 'Contacto - Portfólio';
         $mail->Body = "<h3>Contacto pelo portfólio</h3><br>".$conteudoEmail . "<br>Enviado por: " . $email;
     
         // Envia o email e redireciona de acordo com o idioma selecionado

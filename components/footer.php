@@ -29,7 +29,7 @@
                  <!-- Cloudflare turnstile -->
               <div
                 class="cf-turnstile"
-                data-sitekey="0x4AAAAAAAyIyLNObRrY1S01"
+                data-sitekey="0x4AAAAAAB7oqCKF1OfSNq1H"
                 data-callback="turnstileCallback"
               ></div>
               </div>
@@ -46,7 +46,7 @@
               <div onclick="email()" class="link-email">
                 <i class="fa fa-envelope d-none-md" aria-hidden="true"></i>
                 <span class="fontS-md">
-                  zepedrofernandessampaio@gmail.com
+                  geral@josefernandes.dev
                 </span>
               </div>
             </div>
@@ -64,7 +64,7 @@
               
               <div onclick="email()" class="link-email">
                 <span style="font-size: 13px;">
-                  zepedrofernandessampaio@gmail.com
+                  geral@josefernandes.dev
                 </span>
               </div>
             </div>

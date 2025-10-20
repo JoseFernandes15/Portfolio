@@ -19,7 +19,7 @@
             <div class="col-3">
               <div class="telemovel">
                 <div class="interior-telemovel">
-                  <iframe class="scaled-iframe" src="https://www.josefernandes.pt/" width="100%" height="100%" frameborder="0" scrolling="auto"></iframe>
+                  <iframe class="scaled-iframe" src="https://www.josefernandes.dev/" width="100%" height="100%" frameborder="0" scrolling="auto"></iframe>
                 </div>
               </div>
             </div>
@@ -27,7 +27,7 @@
             <div class="col-8">
               <div class="tablet">
                 <div class="interior-tablet">
-                  <iframe src="https://www.josefernandes.pt/" width="100%" height="100%" frameborder="0" scrolling="auto"></iframe>
+                  <iframe src="https://www.josefernandes.dev/" width="100%" height="100%" frameborder="0" scrolling="auto"></iframe>
                 </div>
               </div>
             </div>

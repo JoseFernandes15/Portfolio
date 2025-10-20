@@ -36,7 +36,7 @@ function changeLanguage(language) {
   document.cookie =
     "language=" +
     language +
-    "; path=/; domain=josefernandes.pt; secure; samesite=Lax; max-age=" +
+    "; path=/; domain=josefernandes.dev; secure; samesite=Lax; max-age=" +
     14 * 24 * 60 * 60;
 
   // Recarrega a página para aplicar a mudança

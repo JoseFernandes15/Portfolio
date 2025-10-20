@@ -2,7 +2,7 @@
 session_set_cookie_params([
     'lifetime' => 0,            // Duração da sessão (0 = até o navegador fechar)
     'path' => '/',              // Disponível em todo o site
-    'domain' => 'josefernandes.pt', // Domínio do cookie
+    'domain' => 'josefernandes.dev', // Domínio do cookie
     'secure' => true,           // Apenas em conexões HTTPS
     'httponly' => true,         // Não acessível via JavaScript
     'samesite' => 'Lax'         // Protege contra ataques CSRF, permite envios dentro do mesmo site
@@ -46,7 +46,7 @@ function setLanguage($language){
     setcookie('language', $language, [
         'expires' => time() + (14 * 24 * 60 * 60),  // Expira em 1 hora
         'path' => '/',               // Disponível em todo o site
-        'domain' => 'josefernandes.pt', // Domínio do cookie
+        'domain' => 'josefernandes.dev', // Domínio do cookie
         'secure' => true,            // Apenas em conexões HTTPS
         'httponly' => false,          // Não acessível via JavaScript
         'samesite' => 'Lax'       // Protege contra CSRF (opcional)
